@@ -8,6 +8,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] private Animator animator;
     [SerializeField] private Collider collider;
     [SerializeField] private GameObject arrowsParent;
+    public Animator chickenAnimator;
 
     // Start is called before the first frame update
     void Start()
@@ -25,6 +26,7 @@ public class Enemy : MonoBehaviour
     {
         collider.enabled = false;
         animator.Play("Die");
+        this.chickenAnimator.Play("Die");
         ShowArrows();
     }
 
