@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using JetSystems;
 
 public class Enemy : MonoBehaviour
 {
@@ -27,6 +28,7 @@ public class Enemy : MonoBehaviour
         collider.enabled = false;
         animator.Play("Die");
         this.chickenAnimator.Play("Die");
+        UIManager.AddCoins(50);
         ShowArrows();
     }
 
